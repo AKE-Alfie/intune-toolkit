@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Intune Device Compliance Report</title>
+<style>
+ body{font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#f4f6f9;color:#1f2933}
+ header{background:#0b3d91;color:#fff;padding:24px 32px}header h1{margin:0;font-size:22px}header p{margin:6px 0 0;opacity:.85;font-size:13px}
+ main{padding:24px 32px}.cards{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+ .card{background:#fff;border-radius:8px;padding:16px 20px;min-width:150px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+ .card .v{font-size:28px;font-weight:600}.card .l{font-size:12px;color:#616e7c;text-transform:uppercase;letter-spacing:.04em}
+ .card.ok .v{color:#1b7f3b}.card.bad .v{color:#c62828}.card.warn .v{color:#b26a00}
+ table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);margin-bottom:24px;font-size:13px}
+ th{background:#e9eef5;text-align:left;padding:8px 10px;font-weight:600}td{padding:7px 10px;border-top:1px solid #edf0f3}
+ .pill{padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600}.pill.ok{background:#e3f4e8;color:#1b7f3b}
+ .pill.bad{background:#fde8e8;color:#c62828}.pill.warn{background:#fff4e0;color:#b26a00}
+ .tag{background:#eceff1;color:#455a64;border-radius:4px;padding:1px 5px;font-size:11px}
+ h2{font-size:16px;margin:8px 0 10px}footer{font-size:12px;color:#7b8794;padding:0 32px 24px}
+</style></head><body>
+<header><h1>Intune Device Compliance Report</h1><p>Generated 2026-10-11 13:41 &middot; Fabrikam (demo data)</p></header>
+<main>
+<div class="cards">
+ <div class="card"><div class="v">12</div><div class="l">Devices</div></div>
+ <div class="card ok"><div class="v">6</div><div class="l">Compliant</div></div>
+ <div class="card bad"><div class="v">6</div><div class="l">Not compliant</div></div>
+ <div class="card"><div class="v">50%</div><div class="l">Compliance rate</div></div>
+ <div class="card warn"><div class="v">2</div><div class="l">Stale (no recent sync)</div></div>
+</div>
+<h2>By operating system</h2>
+<table><thead><tr><th>OS</th><th>Devices</th><th>Compliant</th><th>Not compliant</th></tr></thead><tbody>
+<tr><td>Windows</td><td>6</td><td>3</td><td>3</td></tr>
+<tr><td>Android</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>iOS</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>macOS</td><td>2</td><td>1</td><td>1</td></tr>
+</tbody></table>
+<h2>Devices</h2>
+<table><thead><tr><th>Device</th><th>User</th><th>OS</th><th>Compliance</th><th>Last sync (UTC)</th><th>Ownership</th><th>Model</th></tr></thead><tbody>
+<tr><td>FAB-DT-0021</td><td>reception@fabrikam.example</td><td>Windows 10.0.19045.3803</td><td><span class="pill bad">noncompliant</span></td><td>2026-08-25 20:41 <span class="tag">stale</span></td><td>company</td><td>OptiPlex 7010</td></tr>
+<tr><td>FAB-LT-0163</td><td>s.patel@fabrikam.example</td><td>Windows 10.0.19045.4894</td><td><span class="pill bad">noncompliant</span></td><td>2026-10-09 18:17</td><td>company</td><td>EliteBook 840 G9</td></tr>
+<tr><td>FAB-LT-0171</td><td>a.okafor@fabrikam.example</td><td>Windows 10.0.22631.4317</td><td><span class="pill warn">inGracePeriod</span></td><td>2026-10-10 13:29</td><td>company</td><td>Surface Laptop 5</td></tr>
+<tr><td>FAB-MAC-012</td><td>r.silva@fabrikam.example</td><td>macOS 13.6.9</td><td><span class="pill bad">noncompliant</span></td><td>2026-10-06 11:05</td><td>company</td><td>MacBook Air M2</td></tr>
+<tr><td>iPhone-SPatel</td><td>s.patel@fabrikam.example</td><td>iOS 16.7.8</td><td><span class="pill bad">noncompliant</span></td><td>2026-09-29 06:17</td><td>company</td><td>iPhone 12</td></tr>
+<tr><td>Pixel-AOkafor</td><td>a.okafor@fabrikam.example</td><td>Android 13</td><td><span class="pill bad">error</span></td><td>2026-09-08 20:41 <span class="tag">stale</span></td><td>company</td><td>Pixel 7</td></tr>
+<tr><td>FAB-LT-0142</td><td>j.rivera@fabrikam.example</td><td>Windows 10.0.22631.4317</td><td><span class="pill ok">compliant</span></td><td>2026-10-11 15:53</td><td>company</td><td>Latitude 7440</td></tr>
+<tr><td>FAB-LT-0157</td><td>m.chen@fabrikam.example</td><td>Windows 10.0.22631.4317</td><td><span class="pill ok">compliant</span></td><td>2026-10-11 08:41</td><td>company</td><td>ThinkPad T14 Gen 4</td></tr>
+<tr><td>FAB-LT-0174</td><td>l.garcia@fabrikam.example</td><td>Windows 10.0.26100.2033</td><td><span class="pill ok">compliant</span></td><td>2026-10-11 18:17</td><td>company</td><td>ThinkPad X1 Carbon</td></tr>
+<tr><td>FAB-MAC-009</td><td>d.kim@fabrikam.example</td><td>macOS 14.6.1</td><td><span class="pill ok">compliant</span></td><td>2026-10-11 01:29</td><td>company</td><td>MacBook Pro 14</td></tr>
+<tr><td>Galaxy-MChen</td><td>m.chen@fabrikam.example</td><td>Android 14</td><td><span class="pill ok">compliant</span></td><td>2026-10-10 23:05</td><td>company</td><td>Galaxy S23</td></tr>
+<tr><td>iPhone-JRivera</td><td>j.rivera@fabrikam.example</td><td>iOS 17.6.1</td><td><span class="pill ok">compliant</span></td><td>2026-10-11 13:29</td><td>company</td><td>iPhone 15</td></tr>
+</tbody></table>
+</main>
+<footer>Source: Microsoft Graph /deviceManagement/managedDevices &middot; intune-compliance-report</footer>
+</body></html>
