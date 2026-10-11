@@ -1,4 +1,5 @@
 #Requires -Version 7.0
+
 <#
 .SYNOPSIS
     Exports Intune device compliance to CSV and a clean HTML report using Microsoft Graph.
